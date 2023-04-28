@@ -1,6 +1,8 @@
 import { html, css, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
+// declare let $: any;
+
 @customElement('app-view1')
 export default class View1 extends LitElement {
   static styles = css`
@@ -38,6 +40,14 @@ export default class View1 extends LitElement {
   `;
 
   render() {
+    // create the dashboard in the ts?
+    // $.ig.RevealSdkSettings.setBaseUrl("https://samples.revealbi.io/upmedia-backend/reveal-api/");
+
+    // $.ig.RVDashboard.loadDashboard("Sales", (dashboard: unknown) => {
+    //   const revealView = new $.ig.RevealView("#revealView");
+    //   revealView.dashboard = dashboard;
+    // });
+
     return html`
       <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
       <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet'>
@@ -50,6 +60,7 @@ export default class View1 extends LitElement {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
+        <div id="revealView" style="height: 75%; width: 75%;"></div>
       </div>
     `;
   }
